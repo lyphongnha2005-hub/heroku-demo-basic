@@ -1,0 +1,54 @@
+HEROKU DEMO CHEATSHEET
+======================
+
+A. LOCAL DEMO
+-------------
+cd heroku-demo-basic
+npm install
+npm start
+
+Open: http://localhost:3000
+Stop: Ctrl + C
+
+B. CHECK TOOLS
+--------------
+node --version
+npm --version
+git --version
+heroku --version
+
+C. LOGIN
+--------
+heroku login
+
+D. GIT SETUP
+------------
+git init
+git add .
+git commit -m "Initial Heroku demo"
+git branch -M main
+
+E. CREATE HEROKU APP + DEPLOY
+-----------------------------
+heroku create
+git push heroku main
+heroku open
+
+F. IF APP WAS CREATED IN DASHBOARD
+----------------------------------
+heroku git:remote -a YOUR-HEROKU-APP-NAME
+git push heroku main
+heroku open
+
+G. IF SOMETHING FAILS
+---------------------
+heroku logs --tail
+
+H. SECOND DEPLOY FOR A GOOD LIVE DEMO
+-------------------------------------
+1) Edit the text in index.js
+2) Then:
+   git add .
+   git commit -m "Update demo message"
+   git push heroku main
+   heroku open
